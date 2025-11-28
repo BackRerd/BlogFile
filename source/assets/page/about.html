@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全栈工程师的自我介绍 | Mac风格</title>
+  <!-- 引入Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 引入Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mac: {
+              blue: '#0071e3',
+              gray: '#f5f5f7',
+              dark: '#86868b',
+              light: '#ffffff',
+              accent: '#78c8ff' // 调整为更贴合技术感的浅蓝色作为强调色
+            }
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      /* 自定义工具类 */
+      .mac-shadow {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+      .glass {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      .hover-lift {
+        transition: transform 0.2s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-3px);
+      }
+      .album-img {
+        transition: all 0.3s ease;
+      }
+      .album-img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-mac-gray to-white min-h-screen font-sans text-gray-800">
+  <!-- 顶部菜单栏 - Mac风格 -->
+  <nav class="glass border-b border-gray-200 fixed top-0 left-0 right-0 z-50 py-1 px-4 flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <span class="text-sm font-medium">个人介绍</span>
+      <span class="text-sm opacity-70">文件</span>
+      <span class="text-sm opacity-70">编辑</span>
+      <span class="text-sm opacity-70">视图</span>
+    </div>
+    <div class="flex items-center space-x-6">
+      <span class="text-xs opacity-70">下午 2:30</span>
+      <div class="flex space-x-3">
+        <i class="fa fa-wifi text-sm opacity-70"></i>
+        <i class="fa fa-battery-full text-sm opacity-70"></i>
+        <i class="fa fa-code text-sm opacity-70"></i> <!-- 新增代码图标 -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主内容区 -->
+  <main class="container mx-auto px-4 pt-20 pb-16">
+    <!-- 上部分：基本信息 -->
+    <section class="mb-10 pt-8 pb-12 px-6 rounded-2xl glass mac-shadow">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- 头像区域 -->
+        <div class="relative">
+          <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white mac-shadow hover-lift">
+            <img src="https://q1.qlogo.cn/g?b=qq&nk=3100026750&s=640" alt="个人头像" class="w-full h-full object-cover">
+          </div>
+          <!-- 技术相关装饰元素 -->
+          <div class="absolute -bottom-2 -right-2 bg-mac-accent text-white p-2 rounded-full mac-shadow">
+            <i class="fa fa-code"></i>
+          </div>
+        </div>
+        
+        <!-- 基本信息 -->
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl md:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-mac-blue to-mac-accent">
+            全栈工程师
+          </h1>
+          <p class="text-lg md:text-xl text-mac-dark mb-6">游戏制作者 & MC深度玩家</p>
+          
+          <!-- 社交链接 -->
+          <div class="flex justify-center md:justify-start space-x-4 mb-6">
+            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center mac-shadow text-mac-blue hover:bg-mac-blue hover:text-white transition-colors">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center mac-shadow text-mac-blue hover:bg-mac-blue hover:text-white transition-colors">
+              <i class="fa fa-codepen"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center mac-shadow text-mac-blue hover:bg-mac-blue hover:text-white transition-colors">
+              <i class="fa fa-steam"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center mac-shadow text-mac-blue hover:bg-mac-blue hover:text-white transition-colors">
+              <i class="fa fa-envelope"></i>
+            </a>
+          </div>
+          
+          <!-- 简短介绍 -->
+          <p class="max-w-md mx-auto md:mx-0 text-gray-600">
+            热衷于打造流畅的数字体验，从代码到像素，从逻辑到创意。既爱敲代码的严谨，也爱创作游戏的自由 ✨
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 下部分：详细介绍 -->
+    <section class="pt-12 pb-16 px-6 rounded-2xl glass mac-shadow">
+      <h2 class="text-2xl font-bold mb-8 text-center">关于我 <span class="text-mac-accent">💻</span></h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- 个人简介 -->
+        <div class="bg-white p-6 rounded-xl mac-shadow hover-lift">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-mac-blue/10 flex items-center justify-center mr-3">
+              <i class="fa fa-user text-mac-blue"></i>
+            </div>
+            <h3 class="text-xl font-semibold">个人简介</h3>
+          </div>
+          <p class="text-gray-600 mb-4">
+            你好！我是一名全栈工程师，热衷于将创意转化为现实。从前端交互到后端逻辑，我享受软件开发的每一个环节。
+          </p>
+          <p class="text-gray-600">
+            除了开发应用，我还喜欢制作小游戏和3D建模。通过代码创造虚拟世界，用模型构建立体空间，这是我探索数字领域的两种方式 🚀
+          </p>
+        </div>
+        
+        <!-- 兴趣爱好 -->
+        <div class="bg-white p-6 rounded-xl mac-shadow hover-lift">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-mac-accent/10 flex items-center justify-center mr-3">
+              <i class="fa fa-heart text-mac-accent"></i>
+            </div>
+            <h3 class="text-xl font-semibold">兴趣爱好</h3>
+          </div>
+          <ul class="text-gray-600 space-y-2">
+            <li class="flex items-center"><i class="fa fa-code text-mac-blue mr-2"></i> 开发有趣的应用</li>
+            <li class="flex items-center"><i class="fa fa-gamepad text-mac-accent mr-2"></i> 制作独立小游戏</li>
+            <li class="flex items-center"><i class="fa fa-cube text-mac-blue mr-2"></i> 3D建模与渲染</li>
+            <li class="flex items-center"><i class="fa fa-headphones text-mac-accent mr-2"></i> 听着音乐写代码</li>
+            <li class="flex items-center"><i class="fa fa-coffee text-mac-blue mr-2"></i> 用咖啡驱动开发</li>
+          </ul>
+        </div>
+        
+        <!-- 技能特长 -->
+        <div class="bg-white p-6 rounded-xl mac-shadow hover-lift">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-mac-blue/10 flex items-center justify-center mr-3">
+              <i class="fa fa-star text-mac-blue"></i>
+            </div>
+            <h3 class="text-xl font-semibold">技能特长</h3>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">全栈开发 (前后端)</span>
+                <span class="text-sm">90%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-mac-blue h-2 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">游戏制作 (Unity/Godot)</span>
+                <span class="text-sm">75%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-mac-accent h-2 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">3D建模 (Blender)</span>
+                <span class="text-sm">30%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-mac-blue h-2 rounded-full" style="width: 30%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span class="text-sm">AI领域</span>
+                <span class="text-sm">30%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div class="bg-mac-accent h-2 rounded-full" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 游戏模块 -->
+        <div class="bg-white p-6 rounded-xl mac-shadow hover-lift">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-mac-accent/10 flex items-center justify-center mr-3">
+              <i class="fa fa-gamepad text-mac-accent"></i>
+            </div>
+            <h3 class="text-xl font-semibold">常玩游戏</h3>
+          </div>
+          <div class="space-y-4 text-gray-600">
+            <!-- 我的世界 -->
+            <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+              <img src="https://i0.hdslb.com/bfs/archive/29e08ce598ec6416617272dc1ea88310026442d9.jpg" alt="我的世界" class="w-14 h-14 rounded mr-3 object-cover">
+              <div>
+                <h4 class="font-medium">我的世界 (Minecraft)</h4>
+                <p class="text-sm mt-1">不仅是玩家，也喜欢制作MOD和插件，创造无限可能</p>
+              </div>
+            </div>
+            
+            <!-- 猛兽派对 -->
+            <div class="flex items-start p-3 bg-gray-50 rounded-lg">
+              <img src="https://cdn.biubiu001.com/p/ping/0/icon/0932a10b8b6d7b1c123bb5b76df3fbf0.jpg" alt="猛兽派对" class="w-14 h-14 rounded mr-3 object-cover">
+              <div>
+                <h4 class="font-medium">猛兽派对 (Party Animals)</h4>
+                <p class="text-sm mt-1">和朋友一起玩最欢乐，喜欢这些毛茸茸的小动物们的搞笑对战</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 图片相册模块 -->
+      <div class="mt-16">
+        <div class="flex items-center justify-center mb-8">
+          <div class="w-10 h-10 rounded-full bg-mac-blue/10 flex items-center justify-center mr-3">
+            <i class="fa fa-images text-mac-blue"></i>
+          </div>
+          <h3 class="text-2xl font-semibold">我的作品相册(未完成 - 网络截图)</h3>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/project1/300/300" alt="项目截图" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/model1/300/300" alt="3D模型" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/game1/300/300" alt="游戏截图" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/code1/300/300" alt="代码界面" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/project2/300/300" alt="项目截图" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/model2/300/300" alt="3D模型" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/game2/300/300" alt="游戏截图" class="w-full h-40 object-cover">
+          </div>
+          <div class="rounded-xl overflow-hidden mac-shadow album-img">
+            <img src="https://picsum.photos/seed/event1/300/300" alt="活动照片" class="w-full h-40 object-cover">
+          </div>
+        </div>
+      </div>
+      
+      <!-- 技术相关装饰元素 -->
+      <div class="flex justify-center mt-12 space-x-6">
+        <div class="w-12 h-12 rounded-full bg-mac-blue/10 flex items-center justify-center rotate-12 hover-lift">
+          <i class="fa fa-code text-mac-blue text-xl"></i>
+        </div>
+        <div class="w-12 h-12 rounded-full bg-mac-accent/10 flex items-center justify-center -rotate-6 hover-lift">
+          <i class="fa fa-gamepad text-mac-accent text-xl"></i>
+        </div>
+        <div class="w-12 h-12 rounded-full bg-mac-blue/10 flex items-center justify-center rotate-6 hover-lift">
+          <i class="fa fa-cube text-mac-blue text-xl"></i>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- 底部状态栏 -->
+  <footer class="glass border-t border-gray-200 py-2 px-4 fixed bottom-0 left-0 right-0 z-40">
+    <div class="flex justify-between items-center">
+      <div class="text-xs text-gray-500">开发者介绍 v1.0.0</div>
+      <div class="flex space-x-6 text-xs text-gray-500">
+        <span>已连接Wi-Fi</span>
+        <span>电池 85%</span>
+        <span>代码无BUG ✨</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 交互效果脚本 -->
+  <script>
+    // 滚动淡入效果
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section > div');
+      
+      const fadeInOnScroll = () => {
+        sections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (sectionTop < windowHeight * 0.85) {
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+          }
+        });
+      };
+      
+      // 初始样式
+      sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      });
+      
+      // 相册图片延迟加载效果
+      const albumImages = document.querySelectorAll('.album-img');
+      albumImages.forEach((img, index) => {
+        img.style.transitionDelay = `${index * 0.05}s`;
+      });
+      
+      // 初始检查
+      fadeInOnScroll();
+      
+      // 滚动时检查
+      window.addEventListener('scroll', fadeInOnScroll);
+    });
+  </script>
+</body>
+</html>
