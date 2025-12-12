@@ -1,5 +1,5 @@
 ---
-title: 词条介绍(cbs)
+title: 指令系统(cbs)
 tags:
   - pfc
   - ca
@@ -8,7 +8,6 @@ tags:
 categories:
   - pfc
   - ca
-abbrlink: f2bfe1a
 date: 2025-11-25 09:12:28
 ---
 # ⚡ ClassBioArsenal 指令系统教程

@@ -8,7 +8,6 @@ tags:
 categories:
   - pfc
   - ca
-abbrlink: e56016ac
 date: 2025-11-23 22:22:22
 ---
 # ⚔️ ClassBioArsenal 武器防具系统配置

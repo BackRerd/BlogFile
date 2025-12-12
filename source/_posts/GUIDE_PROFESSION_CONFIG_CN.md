@@ -8,8 +8,7 @@ tags:
 categories:
   - pfc
   - ca
-date: '2025-11-23 018:26:19'
-abbrlink: d854a17e
+date: 2025-11-23 018:26:19
 ---
 # 👥 ClassBioArsenal 职业系统配置
 
@@ -59,10 +58,28 @@ abbrlink: d854a17e
   "maxLevel": 15,
   "maxExp": 200,
   "multiplier": 3,
-  "health": 30,
-  "armor": 3,
-  "damage": 6,
-  "damageSpeed": 1,
+  "attributeBonuses": [
+    {
+      "attribute": "minecraft:generic.max_health",
+      "amountPerLevel": 30,
+      "operation": "add"
+    },
+    {
+      "attribute": "minecraft:generic.armor",
+      "amountPerLevel": 3,
+      "operation": "add"
+    },
+    {
+      "attribute": "minecraft:generic.attack_damage",
+      "amountPerLevel": 6,
+      "operation": "add"
+    },
+    {
+      "attribute": "minecraft:generic.attack_speed",
+      "amountPerLevel": 1,
+      "operation": "add"
+    }
+  ],
   "startingGear": [
     {
       "itemId": "minecraft:iron_sword",
@@ -113,10 +130,36 @@ abbrlink: d854a17e
 
 ### ⚔️ 属性加成字段
 
-- **`health`**：生命值加成
-- **`armor`**：护甲值加成
-- **`damage`**：攻击力加成
-- **`damageSpeed`**：攻击速度加成(暂时失效)
+- **`attributeBonuses`**：属性加成列表（可空）
+  - 每一项代表“某个 Attribute 在每级增加多少”
+  - 支持原版与其他 Mod 的自定义 Attribute（只要写正确的注册名）
+
+#### ✅ attributeBonuses 单项结构
+
+```json
+{
+  "attribute": "minecraft:generic.max_health",
+  "amountPerLevel": 30,
+  "operation": "add"
+}
+```
+
+#### 🔧 字段说明
+
+- **`attribute`**：Attribute 注册名（ResourceLocation）
+  - 推荐写“标准注册名”，例如：
+    - `minecraft:generic.max_health`
+    - `minecraft:generic.armor`
+    - `minecraft:generic.attack_damage`
+    - `minecraft:generic.attack_speed`
+  - 你也可以写其他 Mod 的 Attribute，例如：`othermod:my_attribute`
+
+- **`amountPerLevel`**：每级加成数值（double）
+
+- **`operation`**：加成方式（字符串）
+  - `add`：固定值加法
+  - `multiply_base`：按基础值比例增加
+  - `multiply_total`：按最终值比例增加
 
 > 💡 **基础面板**：HEALTH=10, ARMOR=0, DAMAGE=1, DAMAGE_SPEED=1
 > 📊 使用 `/profession info <职业ID>` 查看实际数值
@@ -275,6 +318,20 @@ abbrlink: d854a17e
    /profession reload all          # 全部
    ```
 
+### 🧾 导出当前已注册的 Attribute 列表（排查用）
+
+当你不确定某个 Attribute 的“注册名”到底应该写什么时，可以在游戏内执行：
+
+```text
+/profession dump_attributes
+```
+
+它会把服务器当前已注册的所有 Attribute 注册名导出到运行目录的：
+
+```text
+classbioarsenal_dumps/
+```
+
 ### ⚔️ 物品职业配置重载
 
 1. 💾 **编辑保存** `item_professions/*.json`
@@ -297,8 +354,8 @@ abbrlink: d854a17e
 - 🎮 根据玩家体验微调 `multiplier` 与 `maxLevel`
 
 ### ⚔️ 职业特色定位
-- 🛡️ **坦克类**：高 `health`、中 `armor`、低 `damage`
-- ⚔️ **输出类**：中 `health`、低 `armor`、高 `damage`/`damageSpeed`
+- 🛡️ **坦克类**：高 `minecraft:generic.max_health`、中 `minecraft:generic.armor`、低 `minecraft:generic.attack_damage`
+- ⚔️ **输出类**：中 `minecraft:generic.max_health`、低 `minecraft:generic.armor`、高 `minecraft:generic.attack_damage`/`minecraft:generic.attack_speed`
 - 🔄 **混合类**：各项平衡
 
 ### 🎨 物品限制策略
