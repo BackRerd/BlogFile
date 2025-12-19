@@ -8,6 +8,7 @@ tags:
 categories:
   - pfc
   - ca
+abbrlink: e5a755fb
 date: 2025-11-25 01:05:28
 ---
 # 📦 ClassBioArsenal 数据包加载配置

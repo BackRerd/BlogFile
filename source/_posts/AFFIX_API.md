@@ -8,6 +8,7 @@ tags:
 categories:
   - pfc
   - ca
+abbrlink: 433c116d
 date: 2025-12-12 18:12:45
 ---
 # ClassBioArsenal 武器 / 护甲词条系统 API 说明

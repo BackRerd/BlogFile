@@ -116,7 +116,24 @@ date: 2025-11-25 06:52:01
       "health_multiplier": 1.2,
       "damage_multiplier": 0.1,
       "armor_multiplier": 0.1,
-      "max_affixes": 5
+      "max_affixes": 5,
+      "min_level": 10,
+      "max_level": 50,
+      "allowed_affixes": [
+        "classbioarsenal:tag_teleport"
+      ],
+      "blocked_affixes": [
+        "classbioarsenal:tag_resurrect"
+      ],
+      "boss_bar": {
+        "enabled": true,
+        "min_level": 20,
+        "color": "RED",
+        "overlay": "NOTCHED_10",
+        "darken_screen": false,
+        "play_boss_music": false,
+        "create_world_fog": false
+      }
     }
   }
 }
@@ -185,6 +202,16 @@ date: 2025-11-25 06:52:01
   - 两者同时存在时：
     - 先按 `allowed_affixes` 过滤候选池 → 再从中移除 `blocked_affixes`。
     - 若过滤后候选池为空，则该生物本次不会生成任何词缀。
+
+- **`boss_bar`**（可选）：
+  - 该生物的 **Boss 血条配置**。
+  - **`enabled`**：是否启用 Boss 血条。
+  - **`min_level`**：显示 Boss 血条所需的最小等级。
+  - **`color`**：血条颜色。可选值：`PINK`, `BLUE`, `RED`, `GREEN`, `YELLOW`, `PURPLE`, `WHITE`。
+  - **`overlay`**：血条样式。可选值：`PROGRESS`, `NOTCHED_6`, `NOTCHED_10`, `NOTCHED_12`, `NOTCHED_20`。
+  - **`darken_screen`**：是否调暗天空背景。
+  - **`play_boss_music`**：是否播放 Boss 音乐。
+  - **`create_world_fog`**：是否产生世界迷雾。
 
 #### 🔄 生效顺序
 
@@ -411,7 +438,7 @@ date: 2025-11-25 06:52:01
 **现有怪物词缀（概念示例）：**
 
 - `tag_cold`：冰冷，减速或冰冻效果。
-- `tag_resurrect`：复活能力，死亡时可以复活一次或多次。
+- `tag_resurrect`：复活能力，死亡时可以复活一次 or 多次。
 - `tag_brutal`：残暴，高额伤害提升。
 - `tag_explosive`：爆炸攻击或死亡时爆炸。
 - `tag_greedy`：掉落更多战利品或吸取玩家经验。

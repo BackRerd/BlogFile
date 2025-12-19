@@ -8,6 +8,7 @@ tags:
 categories:
   - pfc
   - ca
+abbrlink: 3719d53
 date: 2025-12-12 18:12:45
 ---
 # ClassBioArsenal 职业系统二次开发说明

@@ -8,7 +8,8 @@ tags:
 categories:
   - pfc
   - ca
-date: 2025-11-23 018:26:19
+date: '2025-11-23 018:26:19'
+abbrlink: d854a17e
 ---
 # 👥 ClassBioArsenal 职业系统配置
 

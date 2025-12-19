@@ -8,6 +8,7 @@ tags:
 categories:
   - pfc
   - ca
+abbrlink: 12320b39
 date: 2025-12-12 18:12:45
 ---
 # ClassBioArsenal 实体机制（Entity System）API 说明
